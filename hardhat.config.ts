@@ -23,35 +23,7 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 // Go to https://hardhat.org/config/ to learn more
 
 const config: HardhatUserConfig = {
-  // solidity: ">0.4.23 <0.9.0"
-
-  solidity: {
-    compilers: [
-      {
-        version: "^0.8.0",
-      },
-      {
-        version: "0.4.23",
-        settings: {
-          optimizer: {
-            enabled: true,
-            runs: 1000,
-          },
-        },
-      },
-    ],
-    overrides: {
-      "@optionality.io/clone-factory/contracts/CloneFactory.sol": {
-        version: "0.8.0",
-        settings: {
-          optimizer: {
-            enabled: true,
-            runs: 1000,
-          },
-        },
-      },
-    },
-  },
+  solidity: "0.8.4",
   networks: {
     ropsten: {
       url: process.env.ROPSTEN_URL || "",
