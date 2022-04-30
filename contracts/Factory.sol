@@ -18,7 +18,7 @@ contract InvestifyTokenactory {
                 _Daomember = msg.sender;
             }
         }
-        require(_Daomember99 != address(0), "Not a dao member");
+        require(_Daomember != address(0), "Not a dao member");
         _;
     }
 
