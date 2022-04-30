@@ -10,14 +10,15 @@ contract InvestifyTokenactory {
     constructor(address[] memory _DaoMember) {
         Daomember = _DaoMember;
     }
-    modifier onlyDaoMember(){
+
+    modifier onlyDaoMember() {
         address _Daomember;
-        for(uint i; i< Daomember.length; i++){
-            if(msg.sender == Daomember[i]){
+        for (uint256 i; i < Daomember.length; i++) {
+            if (msg.sender == Daomember[i]) {
                 _Daomember = msg.sender;
             }
         }
-        require(_Daomember != address(0), "Not a dao member");
+        require(_Daomember99 != address(0), "Not a dao member");
         _;
     }
 
@@ -41,5 +42,4 @@ contract InvestifyTokenactory {
     }
     //is there a function that adds member to the governance,
     // we need the function here also;
-
 }
